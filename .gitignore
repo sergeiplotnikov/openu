@@ -1,0 +1,11 @@
+**/.DS_Store
+**/*.swp
+**/*_booklet.pdf
+**/*_addon.pdf
+
+# 20465
+20465_systems/infinity_*/**/*
+20465_systems/20465_book_guide.pdf
+
+# 20476
+20476_descrete_math/graph_theory.pdf
