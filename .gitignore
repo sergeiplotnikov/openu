@@ -2,6 +2,7 @@
 **/*.swp
 **/*_booklet.pdf
 **/*_addon.pdf
+**/*.o
 
 # 20465
 20465_systems/infinity_*/**/*

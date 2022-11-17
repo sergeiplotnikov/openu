@@ -1,0 +1,309 @@
+Input  : dabcefLMNOpQrstuv567zyx
+Output : da-cefL-OpQr-v567zyx
+
+Input  : a
+Output : a
+
+Input  : ab
+Output : ab
+
+Input  : abc
+Output : a-c
+
+Input  : abcdefghijklmn
+Output : a-n
+
+Input  : ABCDEFGHIJKLMN
+Output : A-N
+
+Input  : aBcDeFgHiJkLmN
+Output : aBcDeFgHiJkLmN
+
+Input  : ZYXabcdefgZYX
+Output : ZYXa-gZYX
+
+Input  : ZYXabcdefg123
+Output : ZYXa-g123
+
+Input  : abcdefg123
+Output : a-g123
+
+Input  : 123abcdefg
+Output : 123a-g
+
+Input  : abcdef|||ABCD
+Output : a-f|||A-D
+
+Input  : 
+Output : 
+
+Input  : ABCDEEFFFGGHHIIHHHIJJIHGFGFFEEDDDEEEFEEDDEFGFFGFGFFEEEFFGHHHIHHIIHHHGHGGGFGGFGF
+Output : A-EEFFFGGHHIIHHH-JJIHGFGFFEEDDDEEEFEEDD-GFFGFGFFEEEFF-HHHIHHIIHHHGHGGGFGGFGF
+
+Input  : A@??>>>>???@AA@?>>=>?>=>>=>>=<;;:9:9:99::989:;;;<;;;<<;<<<=<;:::;;<<;<<===>==<;
+Output : A@??>>>>???@AA@?>>=>?>=>>=>>=<;;:9:9:99::989:;;;<;;;<<;<<<=<;:::;;<<;<<===>==<;
+
+Input  : AAABCDCCBCCCCBCBBCCBABBCDCDDEEDDDEDDDCDDCCCBBBA@A@ABBCCBAA@AA@AAABCCBBCDEFGFFGH
+Output : AAA-DCCBCCCCBCBBCCBABB-DCDDEEDDDEDDDCDDCCCBBBA@A@ABBCCBAA@AA@AAA-CCBB-GFF-H
+
+Input  : ABCBABCCDCCCDEEDCDEEEFFFFEEEEDDDEEEFFFGFEEFEEFFFGHIHIHHGHGGHIHIHGFEDCBA@A@ABCBC
+Output : A-CBA-CCDCCC-EEDC-EEEFFFFEEEEDDDEEEFFFGFEEFEEFFF-IHIHHGHGG-IHIHGFEDCBA@A@A-CBC
+
+Input  : A@??@???>??>>>=<<=<<<===>=======<;<;;;<=<=<;:989:;:;;;<<;:;;:987776567765455667
+Output : A@??@???>??>>>=<<=<<<===>=======<;<;;;<=<=<;:989:;:;;;<<;:;;:987776567765455667
+
+Input  : AA@?>=>>>=>=>>?>=<<=>>?>=<;;:999::9:9:;;<;;:;<==>?>=>>=>?@?>>=<=<==<==>>>>==<=>
+Output : AA@?>=>>>=>=>>?>=<<=>>?>=<;;:999::9:9:;;<;;:;<==>?>=>>=>?@?>>=<=<==<==>>>>==<=>
+
+Input  : ABBBCCCCBBCBBAA@@?@A@@ABBA@@ABCCBAA@?@?>??@@@??@AAAAABABBCCDEDDEFFFEFEDDDEDCBAB
+Output : ABBBCCCCBBCBBAA@@?@A@@ABBA@@A-CCBAA@?@?>??@@@??@AAAAABABBCC-EDD-FFFEFEDDDEDCBAB
+
+Input  : A@ABAA@@@?@ABCBA@?>==<=>??@?@?@@@ABBABABCCBBBBAABBCDEDDCBBCCBAAA@ABCDEEFGHGFFFG
+Output : A@ABAA@@@?@A-CBA@?>==<=>??@?@?@@@ABBABA-CCBBBBAABB-EDDCBBCCBAAA@A-EE-HGFFFG
+
+Input  : AA@?@@AABBCDDDEDDCCCDCBBAABAABCCDDCDEDCCCDDDCBCDCCDDDDEEFFEDDDEEFEFGHHIJKJIJKLM
+Output : AA@?@@AABB-DDDEDDCCCDCBBAABAA-CCDDC-EDCCCDDDCB-DCCDDDDEEFFEDDDEEFE-HH-KJI-M
+
+Input  : ABBCCDCCBCDEFEEDCCDDCDCCCCCBA@ABBCBBCBAAA@ABCCCBAA@ABBAAA@ABCCDCCCBCDCDCBBABCBC
+Output : ABBCCDCCB-FEEDCCDDCDCCCCCBA@ABBCBBCBAAA@A-CCCBAA@ABBAAA@A-CCDCCCB-DCDCBBA-CBC
+
+Input  : FEDCCCBCCBBCBCCCBBCBCDEDEEDCBCDEEEDEFGFEFFFEEDCBBA@ABABBCBAAAA@A@A@@AAA@AA@??>=
+Output : FEDCCCBCCBBCBCCCBBCB-EDEEDCB-EEED-GFEFFFEEDCBBA@ABABBCBAAAA@A@A@@AAA@AA@??>=
+
+Input  : FFFFGHIJIIIJJKJJKKJJIJIJIIJIHHIJIJJJJKKLMMNMLLMMMNMMLKJKKJJJJJIJKJJJKJKKJJIHHHG
+Output : FFFF-JIIIJJKJJKKJJIJIJIIJIHH-JIJJJJKK-MMNMLLMMMNMMLKJKKJJJJJI-KJJJKJKKJJIHHHG
+
+Input  : FGHIIJJKKJJKJJKKJKKKKKJKKKLKLMNOOOPQQRRRSTSRQPPOOPPQRRRSRSRQRRRRQQQPPQPPOPOPQRQ
+Output : F-IIJJKKJJKJJKKJKKKKKJKKKLK-OOO-QQRRR-TSRQPPOOPP-RRRSRSRQRRRRQQQPPQPPOPO-RQ
+
+Input  : FEDCDCBCDDDDDCCCCDEFFFEEFFFEEEFGHGFEEDDCCBBBCCBBBCCBABCBCDDEDDDCDEFEEEDEEDCDCBA
+Output : FEDCDCB-DDDDDCCCC-FFFEEFFFEEE-HGFEEDDCCBBBCCBBBCCBA-CB-DDEDDDC-FEEEDEEDCDCBA
+
+Input  : FFFGGFFGGHHHGHGGFGFEFEEDCCCDDEDEDEEEDCCDDDEEEFGHHHIIJIJJJJKKKLMLLKLKKJJKKKJJIIH
+Output : FFFGGFFGGHHHGHGGFGFEFEEDCCCDDEDEDEEEDCCDDDEEE-HHHIIJIJJJJKKK-MLLKLKKJJKKKJJIIH
+
+Input  : FGGFGGFGHHIHHHIIIHHGFEEDDDCDCCBCCBBA@?@@@@??>>>>??@?>=<<;;:9:;<=>>=<<=>=>>===>=
+Output : FGGFGGF-HHIHHHIIIHHGFEEDDDCDCCBCCBBA@?@@@@??>>>>??@?>=<<;;:9:;<=>>=<<=>=>>===>=
+
+Input  : FEFFFFGHGHIHGGGGFEFFFGGHIIHIJKJKJKLLKKLKJKKKJKJKLLKKLLLMMLLMLMLMMNMNNNMLKLLKKJI
+Output : FEFFFF-HG-IHGGGGFEFFFGG-IIH-KJKJ-LLKKLKJKKKJKJ-LLKKLLLMMLLMLMLMMNMNNNMLKLLKKJI
+
+Input  : FFEFGHHIJIJIIHGGGFEEFGHIHIJKLLLMMMLMNNOPONOPQPQPQQPQPQRSRQRRRSRRQPPQQPPPONNMNON
+Output : FFE-HH-JIJIIHGGGFEE-IH-LLLMMML-NN-PON-QPQPQQPQP-SRQRRRSRRQPPQQPPPONNM-ON
+
+Input  : FGGGGHGHGHIJIJKKJJJKJKLLLMMNNMMLMLLKLMNNOONOOPPQRQQPQPQPQPONOPPPPPPQQRSSSRRSTSR
+Output : FGGGGHGHG-JI-KKJJJKJ-LLLMMNNMMLMLLK-NNOONOOPP-RQQPQPQPQPON-PPPPPPQQ-SSSRR-TSR
+
+Input  : FEFGHIIJJIJKKKKJJJKJJJKKLMMNMMMLKKLMNONMNNNONMLKLKLMLLKKKLLMLMMLKLMNNNMNNNNNMML
+Output : FE-IIJJI-KKKKJJJKJJJKK-MMNMMMLKK-ONMNNNONMLKLK-MLLKKKLLMLMMLK-NNNMNNNNNMML
+
+Input  : KJKKLKJJKKJIJKJKLMNNMMLKKLMLMMNOPQQQQQRQPQQRQQQRRQQPQRQRQQPPQQPQRSRSTUUTUUTUVWX
+Output : KJKKLKJJKKJI-KJ-NNMMLKK-MLMM-QQQQQRQPQQRQQQRRQQP-RQRQQPPQQP-SR-UUTUUT-X
+
+Input  : KKJKJJKKJKJKKKLMMNMMMMLKLMMLLKLMMMNMMMNONMNOPONMNMNOOPPOPOONMMLLLKKLMNOONONONMN
+Output : KKJKJJKKJKJKKK-MMNMMMMLK-MMLLK-MMMNMMM-ONM-PONMNM-OOPPOPOONMMLLLKK-OONONONMN
+
+Input  : KLLLMMLLMLKLMLLMNMMNOONONOONMNOPQRQQPPQQPPONNNOPQPONONONNMLMMMMLKKLLMMLLLKJJIIJ
+Output : KLLLMMLLMLK-MLL-NMM-OONONOONM-RQQPPQQPPONNN-QPONONONNMLMMMMLKKLLMMLLLKJJIIJ
+
+Input  : KJKLKLMMLMLMMNMNNMNOPOOOONMLKJKLKKKLKLMLMNNMLMMLMLKKKKLLKLLLMMMLLMNNONNOOONNNOP
+Output : KJ-LK-MMLMLMMNMNNM-POOOONMLKJ-LKKKLK-ML-NNMLMMLMLKKKKLLKLLLMMMLL-NNONNOOONNN-P
+
+Input  : KKJIJKKJJIHHIIJKLKJIHGGGHGFEFGFGGFGFEFEFGHIHGGFFGHHIJKJKLMNNOOPQPONNOPQRSSRQQPQ
+Output : KKJI-KKJJIHHII-LKJIHGGGHGFE-GFGGFGFEFE-IHGGFF-HH-KJ-NNOO-QPONN-SSRQQPQ
+
+Input  : KLKKJIHGFFEEEDDEEDDDDEEDCBCBBA@A@@?@ABAABA@@ABCBCDDDDEEFFFEDCCDEFGFFFFEDEFEDEEE
+Output : KLKKJIHGFFEEEDDEEDDDDEEDCBCBBA@A@@?@ABAABA@@A-CB-DDDDEEFFFEDCC-GFFFFED-FEDEEE
+
+Input  : KJJKLKKJJIIIJIHIJJKKLMNMMLMLLMLMMLLKLKJIIIIIIHHHIJKLMLMLMMMNNONNMLLKKJJIHGFGHII
+Output : KJJ-LKKJJIIIJIH-JJKK-NMMLMLLMLMMLLKLKJIIIIIIHHH-MLMLMMMNNONNMLLKKJJIHGF-II
+
+Input  : KKLLLLKJKKKJJKLMLLKLKLMNONNONNNOPQRRSRQRRSTTSTSRSSTSSSTTTSTTUVUUVVVUUVWWWVUVUTT
+Output : KKLLLLKJKKKJJ-MLLKLK-ONNONNN-RRSRQRR-TTSTSRSSTSSSTTTSTT-VUUVVVUU-WWWVUVUTT
+
+Input  : KLKLMMNMMNNMNNNOPPPOOOPPONNOPQQRQQPQQQQQQRQQPOPPQQPPOPOONMLKJKKJJKLKKKJJJJIIHHH
+Output : KLK-MMNMMNNMNNN-PPPOOOPPONN-QQRQQPQQQQQQRQQPOPPQQPPOPOONMLKJKKJJ-LKKKJJJJIIHHH
+
+Input  : KJJIIIIHIIIJJIHIHIJIJJIIIIHIJJJKLMMMMMMLKJKLMMLMNNNMMNNOPQQRRSSRSRSRRQQRSTSSSTT
+Output : KJJIIIIHIIIJJIHIH-JIJJIIIIH-JJJ-MMMMMMLKJ-MML-NNNMMNN-QQRRSSRSRSRRQQ-TSSSTT
+
+Input  : POPOOOONMMNNMNMMLKLMMNMLMNMMLMNMMNMMLMMLMLMNONMMMMMNNMLLKJIHGFFEFEFGFFEFEFFEEDD
+Output : POPOOOONMMNNMNMMLK-MMNML-NMML-NMMNMMLMMLML-ONMMMMMNNMLLKJIHGFFEFE-GFFEFEFFEEDD
+
+Input  : PPOONONMMLMLMMNNONMNOOOPOPQQRQRRQQQRQPPQQQPQQQRSSRSSRQQQRSSTTSTUTTSTSRRSSTUTUUU
+Output : PPOONONMMLMLMMNNONM-OOOPO-QQRQRRQQQRQPPQQQPQQQ-SSRSSRQQQ-SSTTS-UTTSTSRRSS-UTUUU
+
+Input  : PQQPPQRQRRSRQPPPONNMLLLMMLMMNOPPPOPOPOOOOPPONONMMLMNNNOPPQRRSRSTUVUVUVWVWVWXYZZ
+Output : PQQPP-RQRRSRQPPPONNMLLLMMLMM-PPPOPOPOOOOPPONONMML-NNN-PP-RRSR-VUVU-WVWV-ZZ
+
+Input  : POPPOPPOOPQPQPOOOOPOONNNONNNNMLLMNMNONNMMNONMMNOONMLKLKJKKJIHGHHHGGHGGFEFFGHGFF
+Output : POPPOPPOO-QPQPOOOOPOONNNONNNNMLL-NM-ONNMM-ONMM-OONMLKLKJKKJIHGHHHGGHGGFEFF-HGFF
+
+Input  : PPOPPOPOPPQRQRSSRRQQRQRQPOOONONNMLLKLLMNMLKJKLLKKJJJJIHGGGGHHGFFGGGGFEEEDDEEDDC
+Output : PPOPPOPOPP-RQ-SSRRQQRQRQPOOONONNMLLKLL-NMLKJ-LLKKJJJJIHGGGGHHGFFGGGGFEEEDDEEDDC
+
+Input  : PQQPONNONOPQRRQQQQQRQPQPPONNMMLLMNOOOOPPOOONNMLMMNNONMMMLKLMNMLKKLMMLMNNMNOOOPO
+Output : PQQPONNON-RRQQQQQRQPQPPONNMMLL-OOOOPPOOONNMLMMNNONMMMLK-NMLKK-MML-NNM-OOOPO
+
+Input  : POPQQQPQRQRSRQRRQRSTTUVWXWVVWXXXWWVWWXYXWXYYXYZYZ[\\]]^]\[[[ZYXYYZZYZZYZYYXW
+Output : PO-QQQP-RQ-SRQRRQ-TT-XWVV-XXXWWVWW-YXW-YYX-ZYZ[\\]]^]\[[[ZYXYYZZYZZYZYYXW
+
+Input  : PPQPOOPQPQRRSTTTTUTSTUTUUTUUUUUUUVVVVWXYZ[ZZYXXXYZ[[]^^__^^^^___^]^]]^^_`aba
+Output : PPQPOO-QP-RR-TTTTUTS-UTUUTUUUUUUUVVVV-Z[ZZYXXX-Z[[]^^__^^^^___^]^]]^^_`aba
+
+Input  : PQPPPQPQQPQQPPOONOONMMLLMMNMMNNNOOPQPQPPQPPPQQPOPPONONMLKLMNOOPQPQPOPQQPQQRSRQP
+Output : PQPPPQPQQPQQPPOONOONMMLLMMNMMNNNOO-QPQPPQPPPQQPOPPONONMLK-OO-QPQPO-QQPQQ-SRQP
+
+Input  : POOPOPQRQQRQRRSSSRSSSSRQPPPONNNNNMLKJIHGGGHHHGHHIIHHGFFEEEDDCCDDEDDCDDEDCDEEDDC
+Output : POOPO-RQQRQRRSSSRSSSSRQPPPONNNNNMLKJIHGGGHHHGHHIIHHGFFEEEDDCCDDEDDCDDEDC-EEDDC
+
+Input  : UVWVVWXXWXXWWWXYXXXWWVVUUTUTSSTTTUTUVWXYZZZZZZZYXXWXXXWVUUTUTTSRSTUTUUVVWWXYZZZ
+Output : U-WVV-XXWXXWWW-YXXXWWVVUUTUTSSTTTUT-ZZZZZZZYXXWXXXWVUUTUTTSR-UTUUVVWW-ZZZ
+
+Input  : UTSSRQQQQPPONMMNOPQPPQRSTSTSTUVVWVVUUTUUUVWXWXWWVVVUVWWWXWWWWWWXWVWVWVUVWXYZYXY
+Output : UTSSRQQQQPPONMM-QPP-TSTS-VVWVVUUTUUU-XWXWWVVVU-WWWXWWWWWWXWVWVWVU-ZYXY
+
+Input  : UUUTTSRRQQQRRSRSRSRRSTUUTSSRSSRRRSTTTSTSSTSTUUUTSSTTTUVVVUVUVVVVWWVUVWWXWVWWVVW
+Output : UUUTTSRRQQQRRSRSRSRR-UUTSSRSSRRR-TTTSTSSTS-UUUTSSTTT-VVVUVUVVVVWWVU-WWXWVWWVVW
+
+Input  : UVWWVVWWWVVWVWXYZ[[[[\[[ZZ[ZZ[[Z[[[]]\]^_^^]]^]^]^_^_^_^^___`_^__`_^]^^^__
+Output : U-WWVVWWWVVWV-Z[[[[\[[ZZ[ZZ[[Z[[[]]\]^_^^]]^]^]^_^_^_^^___`_^__`_^]^^^__
+
+Input  : UTUVWWVVWWWXXXXYXWXYYYXWXWVUTTSSRSSSRRQQPPOPPOPQPONNNNMNNOOOOOPOPOOPQPONNNONNMM
+Output : UT-WWVVWWWXXXXYXW-YYYXWXWVUTTSSRSSSRRQQPPOPPO-QPONNNNMNNOOOOOPOPOO-QPONNNONNMM
+
+Input  : UUTSRSTTSTUUTSRSTSTSTSRQPONMLKKLLLMNMMLKJKKJIJJJIHGHIJJIHHIHIIHGGGGHIJJJKLMLMMM
+Output : UUTSR-TTS-UUTSR-TSTSTSRQPONMLKKLLL-NMMLKJKKJIJJJIHG-JJIHHIHIIHGGGG-JJJ-MLMMM
+
+Input  : UVVWXYYXYYZZZ[][ZZYXWXXXYXYYYZYXWVUVUVUVWVWVUVUTTSSTTTUUTUTTSTSTUVWWWWXWXYZ[[
+Output : UVV-YYXYYZZZ[][ZZYXWXXXYXYYYZYXWVUVUVU-WVWVUVUTTSSTTTUUTUTTSTS-WWWWXW-Z[[
+
+Input  : UTUTSRQPOPQPOOOPQQQQQPOPQQRQQPPQQRRSTUTTUTSRSSTSRQQRSRSSSRRRRSSTTSTUVUVWVUTUTSS
+Output : UTUTSRQPO-QPOOO-QQQQQPO-QQRQQPPQQRR-UTTUTSRSSTSRQQ-SRSSSRRRRSSTTS-VU-WVUTUTSS
+
+Input  : UUTTUTTSSRSRRQPQPPQRSTTTSSSRRRRSTSTSTUUTUUUUUTTUTUVUUUTUTSRRRSSSRRQQRSRSRRQQPPP
+Output : UUTTUTTSSRSRRQPQPP-TTTSSSRRRR-TSTS-UUTUUUUUTTUT-VUUUTUTSRRRSSSRRQQ-SRSRRQQPPP
+
+Input  : UVVWVUTSRSTSRQRSTTSTSTTSTTSRQPQRQRQQRQQRSTUUTTSRRSTTUVVUVWWVWXYYZ[ZZZZZYYZYYYZZ
+Output : UVVWVUTSR-TSRQ-TTSTSTTSTTSRQP-RQRQQRQQ-UUTTSRR-TT-VVU-WWV-YYZ[ZZZZZYYZYYYZZ
+
+Input  : a`__^]^^]^^]][[[[[[\[\[Z[[]]]^_`abbcba`aababcba`_`aa``abaa``abcccbbccccded
+Output : a`__^]^^]^^]][[[[[[\[\[Z[[]]]^_`abbcba`aaba-cba`_`aa``abaa``a-cccbbcccc-ed
+
+Input  : aaabcbbbbaababccddeeddcdefgfghghijkjjklkkkkjjiiijjjjjjihgfggfeefgfgggfeedeededc
+Output : aaa-cbbbbaaba-ccddeeddc-gf-hg-kjj-lkkkkjjiiijjjjjjihgfggfee-gfgggfeedeededc
+
+Input  : abcbaa``_``aaaaaababbaaa`abaaa`___^__^_``aba``_^___^]]]]^]\]^^^]]]^^__`a`__^
+Output : a-cbaa``_``aaaaaababbaaa`abaaa`___^__^_``aba``_^___^]]]]^]\]^^^]]]^^__`a`__^
+
+Input  : a`_`aabbbaaba`__`aabcbbaabba`_^]^]]\[ZZZ[ZYXYZZ[[\]]]]^^_``aa`a````abbabcbcb
+Output : a`_`aabbbaaba`__`aa-cbbaabba`_^]^]]\[ZZZ[ZYX-ZZ[[\]]]]^^_``aa`a````abba-cbcb
+
+Input  : aaa`_`__``aaa`aaabcba``_`aabaaa`__``_^][ZZZ[[[]]^_^]^^]]^^]]\[[[[ZYXYYZ[[Z[
+Output : aaa`_`__``aaa`aaa-cba``_`aabaaa`__``_^][ZZZ[[[]]^_^]^^]]^^]]\[[[[ZYXYYZ[[Z[
+
+Input  : abbbcdeeedeedeeefedddefgfgfghggffedcbbabaabbbcbbcba```_`aaa```_^]]]\]][[\\]
+Output : abbb-eeedeedeeefeddd-gfgf-hggffedcbbabaabbbcbbcba```_`aaa```_^]]]\]][[\\]
+
+Input  : a`aba```aabbbbaaa```abcddedeeeedcdddccbbabaa`__`a`_`__^][]^^^]^_`___``_`aabcd
+Output : a`aba```aabbbbaaa```a-ddedeeeedcdddccbbabaa`__`a`_`__^][]^^^]^_`___``_`aa-d
+
+Input  : aa``a`_^]^_^]]]^]^_``aababccbcbbbcdeeedeffgfgfefeeddeededccbbbcbabaa`___^_^]]
+Output : aa``a`_^]^_^]]]^]^_``aaba-ccbcbbb-eeed-ffgfgfefeeddeededccbbbcbabaa`___^_^]]
+
+Input  : abbcbaa`aabaabbbbbabaa`_^]^_^^_^_`_^_``ababcdcdedcddcbcccdddddefggfgghhiiijihhi
+Output : abbcbaa`aabaabbbbbabaa`_^]^_^^_^_`_^_``aba-dc-edcddcbcccddddd-ggfgghhiiijihhi
+
+Input  : a`a`aa`_^_`a``__```__^]\[[]][[[]^^^^^]^^__^]^_```_`_`a`aabbbcbcccdeffghhij
+Output : a`a`aa`_^_`a``__```__^]\[[]][[[]^^^^^]^^__^]^_```_`_`a`aabbbcbccc-ff-hh-j
+
+Input  : feeefgfgfggggfghggghgghihhihgggffedcdcdddcbbcdeeddedcbbbbbcdcccddefffedddccbaaa
+Output : feee-gfgfggggf-hggghgg-ihhihgggffedcdcdddcbb-eeddedcbbbbb-dcccdd-fffedddccbaaa
+
+Input  : ffghghijjiiijkklllmnmmlllllmnoonoppppoponnnnnmmlkkjjkklmlkjjjjjkjihhhiiiiijkkll
+Output : ff-hg-jjiii-kklll-nmmlllll-oon-ppppoponnnnnmmlkkjjkk-mlkjjjjjkjihhhiiiii-kkll
+
+Input  : fgfefgghiiihhhghghgffeddeeefffgfeefggghihihhghggfedededefeedeefffgfeeefghhijjii
+Output : fgfe-gg-iiihhhghghgffeddeeefffgfee-ggg-ihihhghggfededed-feedeefffgfeee-hh-jjii
+
+Input  : feeedcbccbbabbcddeeefedcbbabbabaaba```aabcccbabcbaa`a`_^^_`a``aa`__^^]]]^^___
+Output : feeedcbccbbabb-ddeeefedcbbabbabaaba```aa-cccba-cbaa`a`_^^_`a``aa`__^^]]]^^___
+
+Input  : ffgfgffghhhiihhihijjijjiijijiijihhhihihghghijjjjihijjiiihihhhhgfgggffggfedeefgg
+Output : ffgfgff-hhhiihhih-jjijjiijijiijihhhihihghg-jjjjih-jjiiihihhhhgfgggffggfedee-gg
+
+Input  : fgffeededeefghghhihiijjklmnoponmmlmlklklmmlmmlklkjkjkkllmmmlmmlkklmlllmllklkjii
+Output : fgffeededee-hghhihiijj-ponmmlmlklk-mmlmmlklkjkjkkllmmmlmmlkk-mlllmllklkjii
+
+Input  : feefgghijiijjjklkjjklmmmmnopqqpoppoononnnoopoopoopooopopooponnnopopqqpqqqqrqppp
+Output : fee-gg-jiijjj-lkjj-mmmm-qqpoppoononnnoopoopoopooopopooponnn-po-qqpqqqqrqppp
+
+Input  : fffedeefefffgffggfgfeeeefgghhgfedcbaba`__`a`_``aababcbabcbabbbbcccbcbcbbcdeffgg
+Output : fffedeefefffgffggfgfeeee-gghhgfedcbaba`__`a`_``aaba-cba-cbabbbbcccbcbcbb-ffgg
+
+Input  : fghijkjkkjjjjkjkjihhhhihghhihhhghiiijiijjihghhgffggffeeddcccdeffefefeeefedeffed
+Output : f-kjkkjjjjkjkjihhhhihghhihhhg-iiijiijjihghhgffggffeeddccc-ffefefeeefed-ffed
+
+Input  : fedcbaabaaaabcdeeeeefefeefefeddcbbcdedddcccbbcdddddeffggfgfedefffeefedefedeeffe
+Output : fedcbaabaaaa-eeeeefefeefefeddcbb-edddcccbb-ddddd-ffggfgfed-fffeefed-fedeeffe
+
+Input  : kkjihihghgffedcbcddeefefffghhhhghhijjijiihihijjkklllllkjijjklmnopppqpppoopqpppq
+Output : kkjihihghgffedcb-ddeefefff-hhhhghh-jjijiihih-jjkklllllkjijj-pppqpppoo-qpppq
+
+Input  : klllmllkjkjiijkjijkjklklmmmnmllkjkjjihghhhgffedcdeefeffefghhghghhijkjijijijkklm
+Output : klllmllkjkjii-kji-kj-lk-mmmnmllkjkjjihghhhgffedc-eefeffe-hhghghh-kjijiji-kk-m
+
+Input  : kjklkjihhgfedddcdcbbabaa```abbcbcccdccbbabba`abcddeddeffeedccdccbabcbcbba`abcbc
+Output : kj-lkjihhgfedddcdcbbabaa```abbcbcccdccbbabba`a-ddedd-ffeedccdccba-cbcbba`a-cbc
+
+Input  : kkjijjkjkkjiihgfeddddddddedefefedcdcbba`_^__`__^__^_^]^^___`abbbbbabaaaa``aabbc
+Output : kkjijjkjkkjiihgfedddddddded-fefedcdcbba`_^__`__^__^_^]^^___`abbbbbabaaaa``aabbc
+
+Input  : kllmlllkkjjkjklkkjklmmmlmnmmmnooopooppononmmnnmmnnmlllkllkllmnnmlmllkjkllmnnmno
+Output : kllmlllkkjjkj-lkkj-mmml-nmmm-ooopooppononmmnnmmnnmlllkllkll-nnmlmllkj-ll-nnm-o
+
+Input  : kjjijkjijjjkkllkjjijihhihijjihgghggfghhijjjjjijijjjjijjihgfedefefeeededeefgfede
+Output : kjji-kjijjjkkllkjjijihhih-jjihgghggf-hh-jjjjjijijjjjijjihgfed-fefeeededee-gfede
+
+Input  : klklmnmlmmmmmllkjjkkkjkklmmmnmllmmlmmnnmmlklmnmnonoonmnnnoppqrqrstutsrrqppoppop
+Output : klk-nmlmmmmmllkjjkkkjkk-mmmnmllmmlmmnnmmlk-nm-onoonmnnn-pp-rq-utsrrqppoppop
+
+Input  : kjjiihihghhhghgffgffghiihiiiijjjijjiihhiihhijjkklklmmmlmnnnmlmlllklkjkllklkklll
+Output : kjjiihihghhhghgffgff-iihiiiijjjijjiihhiihh-jjkklk-mmml-nnnmlmlllklkj-llklkklll
+
+Input  : kklmnmmllkkjjjkjijjkjkjijihhhgggggghhghhhhijjkklmlkjijjkkklmmlllmmlkjjiiijiijkk
+Output : kk-nmmllkkjjjkjijjkjkjijihhhgggggghhghhhh-jjkk-mlkjijjkkk-mmlllmmlkjjiiijii-kk
+
+Input  : klkjjjkjijjihggffghgggfgfeddcdddcbcba`a`_`_`_^]]]\]^^][Z[[[ZZ[ZYXWWXXWVUTSS
+Output : klkjjjkjijjihggff-hgggfgfeddcdddcbcba`a`_`_`_^]]]\]^^][Z[[[ZZ[ZYXWWXXWVUTSS
+
+Input  : ponopqqqqpooppqqpqpqpqppoonnmmllllmnmnmnopqqpqponnnmnmmlkllkklkkjjiihhgffghhghg
+Output : pon-qqqqpooppqqpqpqpqppoonnmmllll-nmnm-qqpqponnnmnmmlkllkklkkjjiihhgff-hhghg
+
+Input  : pppononnoonnnmmmnmmnnnmlllmmnmmmnonnmnmmnmllmlmmlkllllmmnnopqrrqrsrrqppppoponml
+Output : pppononnoonnnmmmnmmnnnmlllmmnmmm-onnmnmmnmllmlmmlkllllmmnn-rrq-srrqppppoponml
+
+Input  : pqrrsrssrsrqrqppononoonmnnoooppppppqpqpoonnopqponmnoppqqqqppoppoonnnmnooppqpppo
+Output : p-rrsrssrsrqrqppononoonmnnoooppppppqpqpoonn-qponm-ppqqqqppoppoonnnm-ooppqpppo
+
+Input  : ponmlkkkllkjjkllmlkkjiijiiiiihhhihihihghhhijjijjihgffgfgfeeddcdefffeddcdccdeedc
+Output : ponmlkkkllkjj-llmlkkjiijiiiiihhhihihihghhh-jjijjihgffgfgfeeddc-fffeddcdcc-eedc
+
+Input  : ppppqqrrqrqpqqqqpppppooppqqqpqrrqrqqrqqqqrqrqrrsrqqrsrrststuvuvwwxyxwvvwvwvvwwv
+Output : ppppqqrrqrqpqqqqpppppooppqqqp-rrqrqqrqqqqrqrqrrsrqq-srr-ts-vu-ww-yxwvvwvwvvwwv
+
+Input  : pqqrrrrrrqpqqpooppqrstttuvuuvuvvvuutuuutsrrqrqppoppoooonnononmllkjkjijkjjihhghg
+Output : pqqrrrrrrqpqqpoopp-ttt-vuuvuvvvuutuuutsrrqrqppoppoooonnononmllkjkji-kjjihhghg
+
+Input  : popopqppoonopqrrqqponopononnopqqpqrrrrrsrqrqrrsttuvvwwxxyzzzzyxxxxwvwwvuuutsrqp
+Output : popo-qppoon-rrqqpon-pononn-qqp-rrrrrsrqrqrr-tt-vvwwxx-zzzzyxxxxwvwwvuuutsrqp
+
+Input  : ppoppqrrrqppppppqrrqqrsrrstttsrrrrqrrrrrssrqqppoopqrrsrrrrsrsrrqpqpqrqqqrrqpppo
+Output : ppopp-rrrqpppppp-rrqq-srr-tttsrrrrqrrrrrssrqqppoo-rrsrrrrsrsrrqpqp-rqqqrrqpppo
+
+Input  : pqqpqpppqqppqqppopqqrrstuvwwvwvvwxxwwxyxyzzyxxwxxxwwxwwxwwvwvuututtuvwxxwxwxxyx
+Output : pqqpqpppqqppqqppo-qqrr-wwvwvv-xxww-yx-zzyxxwxxxwwxwwxwwvwvuututt-xxwxwxxyx
+
+Input  : popppopppqpppoppqrqqppopopppoonnmmnonopqrqrrstutttsttttststttstutttuvvwxwvuvwvu
+Output : popppopppqpppopp-rqqppopopppoonnmm-on-rqrr-utttsttttststtts-uttt-vv-xwvu-wvu
+

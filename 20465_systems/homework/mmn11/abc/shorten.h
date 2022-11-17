@@ -1,0 +1,1 @@
+void ShortenString(char *str);
