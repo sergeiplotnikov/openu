@@ -4,10 +4,10 @@ EXECUTABLE = my_rottate
 $(EXECUTABLE): my_rottate.o rottate.o
 	gcc $(CFLAGS) -o $(EXECUTABLE) my_rottate.o rottate.o
 
-my_rottate.o: rottate.h
+my_rottate.o: my_rottate.c rottate.h
 	gcc $(CFLAGS) -c my_rottate.c
 
-rottate.o:
+rottate.o: rottate.c
 	gcc $(CFLAGS) -c rottate.c
 
 .PHONY: clean

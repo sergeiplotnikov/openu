@@ -4,10 +4,10 @@ EXECUTABLE = abc
 $(EXECUTABLE): abc.o shorten.o
 	gcc $(CFLAGS) -o $(EXECUTABLE) abc.o shorten.o
 
-abc.o: shorten.h
+abc.o: abc.c shorten.h
 	gcc $(CFLAGS) -c abc.c
 
-shorten.o:
+shorten.o: shorten.c
 	gcc $(CFLAGS) -c shorten.c
 
 .PHONY: clean
