@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "rottate.h"
 
 #define MAX_64BIT_UINT_LENGTH_HEXA 16
@@ -228,7 +229,7 @@ void ProcessInput(char *numStr, char *rottStr)
 	inputNumber = atoi(numStr);
 	rottations = atoi(rottStr);
 
-	printf("The provided number in Decimal:   %32u", inputNumber);
+	printf("The provided number in Decimal:   %32u, rottations: %d", inputNumber, rottations);
 	PrintlNumber(inputNumber);
 
 	rottatedNumber = my_rottate(inputNumber, rottations);
@@ -239,19 +240,13 @@ void ProcessInput(char *numStr, char *rottStr)
 
 void PromptForNumberString(char *numBuffer, int bufferSize)
 {
-	/* system dependent UINT set to max value */
-	unsigned int maxUIntValue = -1;
-
-	printf("Please enter an integer in the range of [0,%u]\n", maxUIntValue);
+	printf("Please enter an integer in the range of [0,%u]\n", UINT_MAX);
 	PromptForInputString(numBuffer, bufferSize);
 }
 
 void PromptForRottationString(char *rottBuffer, int bufferSize)
 {
-	/* system dependent UINT set to max value */
-	unsigned int maxUIntValue = -1;
-
-	printf("Please enter a number of rotations in the range of [-%u,%u].\n", maxUIntValue/2 + 1, maxUIntValue/2);
+	printf("Please enter a number of rotations in the range of [-%u,%u].\n", INT_MIN, INT_MAX);
 	printf("Negative number for left-rottation, positive for right-rottation.\n");
 	PromptForInputString(rottBuffer, bufferSize);
 }

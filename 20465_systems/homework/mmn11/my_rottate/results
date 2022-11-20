@@ -1,4 +1,22 @@
-The provided number in Decimal:                              12345
+The provided number in Decimal:                                  1, rottations: 1
+In Binary:                                 00000000000000000000000000000001
+In Octal:           0000000000000000000001
+In Hexadecimal: 0000000000000001
+The 'rottated' number in Decimal:                       2147483648
+In Binary:                                 10000000000000000000000000000000
+In Octal:           0000000000020000000000
+In Hexadecimal: 0000000080000000
+
+The provided number in Decimal:                         2147483647, rottations: -1
+In Binary:                                 01111111111111111111111111111111
+In Octal:           0000000000017777777777
+In Hexadecimal: 000000007FFFFFFF
+The 'rottated' number in Decimal:                       4294967294
+In Binary:                                 11111111111111111111111111111110
+In Octal:           0000000000037777777776
+In Hexadecimal: 00000000FFFFFFFE
+
+The provided number in Decimal:                              12345, rottations: 6
 In Binary:                                 00000000000000000011000000111001
 In Octal:           0000000000000000030071
 In Hexadecimal: 0000000000003039
@@ -6,4 +24,148 @@ The 'rottated' number in Decimal:                       3825205440
 In Binary:                                 11100100000000000000000011000000
 In Octal:           0000000000034400000300
 In Hexadecimal: 00000000E40000C0
+
+The provided number in Decimal:                            7654321, rottations: 0
+In Binary:                                 00000000011101001100101110110001
+In Octal:           0000000000000035145661
+In Hexadecimal: 000000000074CBB1
+The 'rottated' number in Decimal:                          7654321
+In Binary:                                 00000000011101001100101110110001
+In Octal:           0000000000000035145661
+In Hexadecimal: 000000000074CBB1
+
+The provided number in Decimal:                            7654321, rottations: 1
+In Binary:                                 00000000011101001100101110110001
+In Octal:           0000000000000035145661
+In Hexadecimal: 000000000074CBB1
+The 'rottated' number in Decimal:                       2151310808
+In Binary:                                 10000000001110100110010111011000
+In Octal:           0000000000020016462730
+In Hexadecimal: 00000000803A65D8
+
+The provided number in Decimal:                            7654321, rottations: -1
+In Binary:                                 00000000011101001100101110110001
+In Octal:           0000000000000035145661
+In Hexadecimal: 000000000074CBB1
+The 'rottated' number in Decimal:                         15308642
+In Binary:                                 00000000111010011001011101100010
+In Octal:           0000000000000072313542
+In Hexadecimal: 0000000000E99762
+
+The provided number in Decimal:                            7654321, rottations: -16
+In Binary:                                 00000000011101001100101110110001
+In Octal:           0000000000000035145661
+In Hexadecimal: 000000000074CBB1
+The 'rottated' number in Decimal:                       3417374836
+In Binary:                                 11001011101100010000000001110100
+In Octal:           0000000000031354200164
+In Hexadecimal: 00000000CBB10074
+
+The provided number in Decimal:                            7654321, rottations: -32
+In Binary:                                 00000000011101001100101110110001
+In Octal:           0000000000000035145661
+In Hexadecimal: 000000000074CBB1
+The 'rottated' number in Decimal:                          7654321
+In Binary:                                 00000000011101001100101110110001
+In Octal:           0000000000000035145661
+In Hexadecimal: 000000000074CBB1
+
+The provided number in Decimal:                            7654321, rottations: -33
+In Binary:                                 00000000011101001100101110110001
+In Octal:           0000000000000035145661
+In Hexadecimal: 000000000074CBB1
+The 'rottated' number in Decimal:                         15308642
+In Binary:                                 00000000111010011001011101100010
+In Octal:           0000000000000072313542
+In Hexadecimal: 0000000000E99762
+
+The provided number in Decimal:                              61680, rottations: 0
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                            61680
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+
+The provided number in Decimal:                              61680, rottations: 1
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                            30840
+In Binary:                                 00000000000000000111100001111000
+In Octal:           0000000000000000074170
+In Hexadecimal: 0000000000007878
+
+The provided number in Decimal:                              61680, rottations: 2
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                            15420
+In Binary:                                 00000000000000000011110000111100
+In Octal:           0000000000000000036074
+In Hexadecimal: 0000000000003C3C
+
+The provided number in Decimal:                              61680, rottations: 3
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                             7710
+In Binary:                                 00000000000000000001111000011110
+In Octal:           0000000000000000017036
+In Hexadecimal: 0000000000001E1E
+
+The provided number in Decimal:                              61680, rottations: 4
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                             3855
+In Binary:                                 00000000000000000000111100001111
+In Octal:           0000000000000000007417
+In Hexadecimal: 0000000000000F0F
+
+The provided number in Decimal:                              61680, rottations: 0
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                            61680
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+
+The provided number in Decimal:                              61680, rottations: -1
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                           123360
+In Binary:                                 00000000000000011110000111100000
+In Octal:           0000000000000000360740
+In Hexadecimal: 000000000001E1E0
+
+The provided number in Decimal:                              61680, rottations: -2
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                           246720
+In Binary:                                 00000000000000111100001111000000
+In Octal:           0000000000000000741700
+In Hexadecimal: 000000000003C3C0
+
+The provided number in Decimal:                              61680, rottations: -3
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                           493440
+In Binary:                                 00000000000001111000011110000000
+In Octal:           0000000000000001703600
+In Hexadecimal: 0000000000078780
+
+The provided number in Decimal:                              61680, rottations: -4
+In Binary:                                 00000000000000001111000011110000
+In Octal:           0000000000000000170360
+In Hexadecimal: 000000000000F0F0
+The 'rottated' number in Decimal:                           986880
+In Binary:                                 00000000000011110000111100000000
+In Octal:           0000000000000003607400
+In Hexadecimal: 00000000000F0F00
 
