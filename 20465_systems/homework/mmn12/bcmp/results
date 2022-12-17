@@ -1,0 +1,102 @@
+Please enter the following 4 parameters, in the order of the list below, separated by either a whitespace, tab or newline.
+Terminate your input pressing CTRL+d twice.
+1) number of consecutive bytes to compare - must be a non-negative number.
+2) zero-based starting position of the 1st compared byte block - must be a non-negative number.
+3) zero-based starting position of the 2nd compared byte block - must be a non-negative number.
+4) A block of text, up to 512 characters, for the 3 parameters above to be applied to.
+
+
+Received 'len' argument: 0
+Received '1st starting point' argument: 3
+Received '2nd starting point' argument: 3
+Recieved 'text block' argument: aaaaaaaaaaaaaaaaaaaaaa
+
+Compared blocks are identical.
+################################################################################
+
+Please enter the following 4 parameters, in the order of the list below, separated by either a whitespace, tab or newline.
+Terminate your input pressing CTRL+d twice.
+1) number of consecutive bytes to compare - must be a non-negative number.
+2) zero-based starting position of the 1st compared byte block - must be a non-negative number.
+3) zero-based starting position of the 2nd compared byte block - must be a non-negative number.
+4) A block of text, up to 512 characters, for the 3 parameters above to be applied to.
+
+
+Received 'len' argument: 0
+Received '1st starting point' argument: 3
+Received '2nd starting point' argument: 3
+Recieved 'text block' argument: aaaaaaaaaaaaaaaaaaaaaa
+
+Compared blocks are identical.
+################################################################################
+
+Please enter the following 4 parameters, in the order of the list below, separated by either a whitespace, tab or newline.
+Terminate your input pressing CTRL+d twice.
+1) number of consecutive bytes to compare - must be a non-negative number.
+2) zero-based starting position of the 1st compared byte block - must be a non-negative number.
+3) zero-based starting position of the 2nd compared byte block - must be a non-negative number.
+4) A block of text, up to 512 characters, for the 3 parameters above to be applied to.
+
+
+Received 'len' argument: 3
+Received '1st starting point' argument: 4
+Received '2nd starting point' argument: 5
+Recieved 'text block' argument: aaaaaaaaaaaaaaaaaaaaaaa
+
+Compared blocks are identical.
+################################################################################
+
+Please enter the following 4 parameters, in the order of the list below, separated by either a whitespace, tab or newline.
+Terminate your input pressing CTRL+d twice.
+1) number of consecutive bytes to compare - must be a non-negative number.
+2) zero-based starting position of the 1st compared byte block - must be a non-negative number.
+3) zero-based starting position of the 2nd compared byte block - must be a non-negative number.
+4) A block of text, up to 512 characters, for the 3 parameters above to be applied to.
+
+
+Received 'len' argument: 3
+Received '1st starting point' argument: 4
+Received '2nd starting point' argument: 5
+Recieved 'text block' argument: aaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+Compared blocks are identical.
+################################################################################
+
+Please enter the following 4 parameters, in the order of the list below, separated by either a whitespace, tab or newline.
+Terminate your input pressing CTRL+d twice.
+1) number of consecutive bytes to compare - must be a non-negative number.
+2) zero-based starting position of the 1st compared byte block - must be a non-negative number.
+3) zero-based starting position of the 2nd compared byte block - must be a non-negative number.
+4) A block of text, up to 512 characters, for the 3 parameters above to be applied to.
+
+
+Received 'len' argument: 3
+Received '1st starting point' argument: 3
+Received '2nd starting point' argument: 5
+Recieved 'text block' argument: aaa
+aaaaaaa
+aaaaaa
+aaaaaaa
+
+Compared blocks are not identical.
+################################################################################
+
+Please enter the following 4 parameters, in the order of the list below, separated by either a whitespace, tab or newline.
+Terminate your input pressing CTRL+d twice.
+1) number of consecutive bytes to compare - must be a non-negative number.
+2) zero-based starting position of the 1st compared byte block - must be a non-negative number.
+3) zero-based starting position of the 2nd compared byte block - must be a non-negative number.
+4) A block of text, up to 512 characters, for the 3 parameters above to be applied to.
+
+
+Received 'len' argument: 3
+Received '1st starting point' argument: 4
+Received '2nd starting point' argument: 5
+Recieved 'text block' argument: aaa
+aaaaaaa
+aaaaaa
+aaaaaaa
+
+Compared blocks are identical.
+################################################################################
+
