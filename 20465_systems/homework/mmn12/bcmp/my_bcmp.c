@@ -10,9 +10,16 @@
 #define EXECUTALBE_NAME 1
 #define MIN_INPUT_PARAMS (REQUIRED_PARAMS + EXECUTALBE_NAME)
 
-/* TODO */
-#define INPUT_BUFF_SIZE 600
-#define INPUT_BUFF_SIZE_S "600"
+/*
+ *	buffer size for all 4 parameters:
+ *		text block = 512
+ *		len + 1st + 2nd = 3*3
+ *		4 whitespace streaks before each param = 4*10
+ *		1 string terminator
+ *			==> total: 562 ~ 600
+ */
+#define INPUT_BUFF_SIZE 600 /* includes terminator */
+#define INPUT_BUFF_SIZE_S "599" /* used in scanf, MUST no include terminator */
 
 #define ERR_MSG_BUFF_SIZE 120
 
@@ -105,12 +112,17 @@ void* PointerFromOffset(const char *memBlock, int offsetInBytes);
 
 int ParseStdinArgsAndRun(int argc, char **argv)
 {
+	/* buffer used for the users input */
 	char inputBuffer[INPUT_BUFF_SIZE];
+
+	/* pointers to the 4 argument strings, initiated to executable arguments
+	   and later used for stdin input if not enough arguments were passed */
 	char *lenStr = *(argv + 1);
 	char *frstIdxStr = *(argv + 2);
 	char *scndIdxStr = *(argv + 3);
 	char *blckStr = *(argv + 4);
 
+	/* indicates if the passed argument strings are valid */
 	int inputIsValid = TRUE;
 
 	if (MIN_INPUT_PARAMS > argc)
@@ -149,15 +161,7 @@ int ParseStdinArgsAndRun(int argc, char **argv)
 			PointerFromOffset(blckStr, scndIdx),
 			len
 		);
-
-		if (0 == result)
-		{
-			printf("\nCompared blocks are identical.\n");
-		}
-		else
-		{
-			printf("\nCompared blocks are not identical.\n");
-		}
+		printf("\nCompared blocks are%s identical.\n", 0 == result ? "" : " not");
 		return result;
 	}
 	else
@@ -181,7 +185,7 @@ void PromptForInput(char *buffer)
 	printf("3) zero-based starting position of the 2nd compared byte block - must be a non-negative number.\n");
 	printf("4) A block of text, up to 512 characters, for the 3 parameters above to be applied to.\n");
 
-	scanf("%" INPUT_BUFF_SIZE_S "[^\0]", buffer);
+	scanf("%" INPUT_BUFF_SIZE_S "[^EOF]", buffer);
 }
 
 /*
@@ -202,8 +206,13 @@ void TokenizeInput(
 	char **blckStr
 )
 {
+	/* iterates over the input string */
 	char *head = (char *)inputBuffer;
+
+	/* true is head points to a character in a token */
 	int inToken = FALSE;
+
+	/* specifies the current of the 4 tokens */
 	int currentTokenOrder = 0;
 
 	while ('\0' != *head)
@@ -260,7 +269,9 @@ int ValidateInput(
 	const char *blckStr
 )
 {
+	/* used to hold numeric values of the argument strings */
 	int len, frstIdx, scndIdx;
+
 	int blockLen = strlen(blckStr);
 
 	if (
@@ -311,7 +322,10 @@ int ValidateInput(
 
 int IsNonNegativeIntegerString(const char *str, const char *argName)
 {
+	/* iterates over the argument string */
 	const char *head = str;
+
+	/* TRUE is a character that is not a digin was found */
 	int nonDigitFound = FALSE;
 
 	while ('\0' != *head && !IsWhiteSpace(*head) && !nonDigitFound)
